@@ -60,7 +60,9 @@ class SolveDiffusion2D:
         u = self.T_cold * np.ones((self.nx, self.ny))
 
         # Initial conditions - circle of radius r centred at (cx,cy) (mm)
-        r, cx, cy = 2, 5, 5
+        r = min(self.h, self.w) / 4.0
+        cx = self.w / 2.0
+        cy = self.h / 2.0
         r2 = r ** 2
         for i in range(self.nx):
             for j in range(self.ny):
