@@ -102,5 +102,5 @@ class TestDiffusion2DFunctions(TestCase):
                 if p2 < r2:
                     expected_u[i, j] = self.solver.T_hot
                     
-    # check values
-    assert np.allclose(u, expected_u)
+        # check values
+        assert np.allclose(u, expected_u)
